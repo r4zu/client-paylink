@@ -1,4 +1,4 @@
-FROM bitnami/node:20 as builder
+FROM bitnami/node:20 AS builder
 
 RUN npm install -g pnpm
 
@@ -14,7 +14,7 @@ RUN pnpm build
 
 # ----------------------------------------------
 
-FROM bitnami/node:20 as runner
+FROM bitnami/node:20 AS runner
 
 RUN npm install -g pnpm
 
